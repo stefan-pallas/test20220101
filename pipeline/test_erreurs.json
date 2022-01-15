@@ -97,7 +97,7 @@
 					"storedProcedureParameters": {
 						"logMessage": {
 							"value": {
-								"value": "@activity('from source to dest').output",
+								"value": "@activity('from source to dest').Error.Message",
 								"type": "Expression"
 							},
 							"type": "String"
