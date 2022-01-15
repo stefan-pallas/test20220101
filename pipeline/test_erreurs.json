@@ -35,9 +35,9 @@
 									"physicalType": "int"
 								},
 								"sink": {
-									"name": "int01",
-									"type": "Int32",
-									"physicalType": "int"
+									"name": "str01",
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -47,9 +47,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "str01",
-									"type": "String",
-									"physicalType": "varchar"
+									"name": "int01",
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							}
 						],
@@ -97,7 +97,7 @@
 					"storedProcedureParameters": {
 						"param01": {
 							"value": {
-								"value": "@activity('from source to dest').Error.Message",
+								"value": "@activity('from source to dest').output",
 								"type": "Expression"
 							},
 							"type": "String"
