@@ -74,8 +74,8 @@
 				]
 			},
 			{
-				"name": "Data flow1",
-				"type": "ExecuteDataFlow",
+				"name": "Stored procedure1",
+				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
 						"activity": "from source to dest",
@@ -85,7 +85,7 @@
 					}
 				],
 				"policy": {
-					"timeout": "1.00:00:00",
+					"timeout": "7.00:00:00",
 					"retry": 0,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
@@ -93,21 +93,20 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataflow": {
-						"referenceName": "logError",
-						"type": "DataFlowReference",
-						"parameters": {
-							"logValue": {
-								"value": "'@{activity('from source to dest').Error.Message}'",
+					"storedProcedureName": "[dbo].[log]",
+					"storedProcedureParameters": {
+						"param01": {
+							"value": {
+								"value": "@activity('from source to dest').Error.Message",
 								"type": "Expression"
-							}
+							},
+							"type": "String"
 						}
-					},
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
-					},
-					"traceLevel": "Fine"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
