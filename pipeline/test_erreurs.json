@@ -95,7 +95,7 @@
 				"typeProperties": {
 					"storedProcedureName": "[dbo].[log]",
 					"storedProcedureParameters": {
-						"param01": {
+						"logMessage": {
 							"value": {
 								"value": "@activity('from source to dest').output",
 								"type": "Expression"
