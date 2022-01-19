@@ -3,7 +3,7 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"factoryName": {
-			"value": "DEVADFSSZ20220119"
+			"value": "RCTADFSSZ20220119"
 		},
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
