@@ -1,0 +1,9 @@
+{
+	"name": "DEVADFSSZ20220121",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8d512c3a-502e-4536-88b9-e180f70ac0ef",
+		"tenantId": "14bface7-8a63-4328-877c-3fcb488d8489"
+	}
+}
